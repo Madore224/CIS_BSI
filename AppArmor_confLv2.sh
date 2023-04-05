@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Fiable 85 %
+
 echo -e "START AppArmor set profiles...\n"
 
 sudo apt-get install apparmor-utils
