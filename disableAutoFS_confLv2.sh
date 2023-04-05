@@ -1,13 +1,16 @@
 #!/bin/bash
 
+#Fiable 98 %
+
 echo -e "START disabled autofs...\n"
 
 # Si autoFS est install renvoie 0 (signifie succès). Sinon autoFS n'est pas intallé.
 if dpkg -s autofs >/dev/null 2>&1; then
+
+	echo "AutoFs is installed."
 	while true; do
 
         # Demande à l'utilisateur de faire un choix
-		echo "AutoFs is installed."
 		echo "1. Disabled AutoFS"
 		echo "2. Delete the package AutoFS"
 		
