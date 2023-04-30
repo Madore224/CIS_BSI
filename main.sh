@@ -2,6 +2,8 @@
 
 echo "Bonjour !"
 
+sudo su
+
 # chemin vers le script à exécuter
 script_global="global/main_global.sh"
 script_workstation="workstation/main_workstation.sh"
