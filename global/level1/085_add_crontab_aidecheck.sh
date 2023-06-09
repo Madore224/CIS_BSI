@@ -6,6 +6,7 @@ endcolor="\033[0m\n"
 
 
 #page 85
+echo -e "[+]$green Check if a crontab for Aidecheck exist $endcolor"
 if [[ "$(crontab -u root -l | grep aide)" == "" ]]
 then
 	echo -e "[+]$green Add a crontab to schedule Aidecheck $endcolor"

@@ -5,7 +5,7 @@ red="\033[31m"
 endcolor="\033[0m\n"
 
 #page 46 to 50
-
+echo -e "[+]$green Ensure /dev/shm is configured $endcolor"
 if [ "$(mount | grep -E '\s/dev/shm\s')" != "tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel)" ]
 then
 	if [ "$(grep -E '\s/dev/shm\s' /etc/fstab)" = "" ]

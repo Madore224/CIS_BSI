@@ -5,6 +5,7 @@ red="\033[31m"
 endcolor="\033[0m\n"
 
 #page 98
+echo -e "[+]$green Ensure address space layout randomization (ASLR) is enabled $endcolor"
 if [[ "$(grep 'kernel\.randomize_va_space' /etc/sysctl.conf /etc/sysctl.d/*)" == "" ]]
 then
 	echo -e "[+]$green Add parameter to /etc/sysctl.conf $endcolor"

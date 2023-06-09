@@ -5,6 +5,7 @@ red="\033[31m"
 endcolor="\033[0m\n"
 
 #page 92
+echo -e "[+]$green Ensure permissions on bootloader config are configured $endcolor"
 if [[ -f "/boot/grub/grub.cfg" ]]
 then
 	echo -e "[+]$green /boot/grub/grub.cfg permissions modified $endcolor"

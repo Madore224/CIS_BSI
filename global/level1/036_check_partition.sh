@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #page 36 to 44
+echo -e "[+] $green Ensure /tmp is configured $endcolor"
 
 command=$(mount)
 if ! echo $command | grep -q -E '\s/tmp\s'
@@ -15,7 +16,7 @@ then
                 rm patch.patch > /dev/null 2>&1
                 systemctl daemon-reload > /dev/null 2>&1
                 systemctl --now enabled tmp.mount > /dev/null 2>&1
-                mount -o remount,nodev /tmp
+                mount -o remount,nodev /tmp 
                 mount -o remount,nosuid /tmp
                 mount -o remount,noexec /tmp
         fi

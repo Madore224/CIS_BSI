@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #page 101
+echo '[+] Ensure core dumps are restricted'
 command=$(systemctl is-enabled coredump.service)
 if echo $command | grep -q -E '^(enabled|disabled|masked)$'
 then
@@ -9,7 +10,6 @@ then
 	command3=$(grep "fs.suid_dumpable" /etc/sysctl.conf /etc/sysctl.d/*)
 	if [ ! echo $command | grep -q '* hard core 0' ] || [ ! echo $command | grep -q 'fs.suid_dumpable = 0' ] || [ ! echo $command | grep -q 'fs.suid_dumpable = 0' ]
 	then
-		echo '[+] Ensure core dumps are restricted'
 		echo '* hard core 0' >> /etc/security/limits.conf
 		echo 'fs.suid_dumpable = 0' >> /etc/sysctl.conf
 		sysctl -w fs.suid_dumpable=0

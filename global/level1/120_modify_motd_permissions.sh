@@ -5,6 +5,7 @@ red="\033[31m"
 endcolor="\033[0m\n"
 
 #page 120
+echo -e "[+]$green Ensure permissions on /etc/motd are configured $endcolor"
 if [[ -d "/etc/motd" ]]
 then
 	echo -e "[+]$green /etc/motd permissions modified $endcolor"
