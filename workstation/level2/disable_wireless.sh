@@ -3,8 +3,9 @@
 # Ensure wireless interfaces are disabled
 # On s'assure que les interfaces sans fil sont désactivées
 
+echo "[+] Disabled Wireless interfaces..."
+
 if command -v nmcli >/dev/null 2>&1 ; then
-	echo "\nWireless interfaces are disabled...\n"
 	nmcli radio all off
 else
 	if [ -n "$(find /sys/class/net/*/ -type d -name wireless)" ]; then
