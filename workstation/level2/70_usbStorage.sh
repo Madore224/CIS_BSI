@@ -1,12 +1,11 @@
 #!/bin/bash
 
-#Fiable 65 %
 echo "[+] Unload the usb-storage..."
 
 output2=$(lsmod | grep usb-storage)
-
 check="false"
-if modprobe -n -v usb-storage >/dev/null 2>&1 == "install /bin/true"; then
+
+if modprobe -n -v usb-storage | grep -q "install /bin/true"; then
 	if [ -z "$output2" ]; then
 		check="true"	
 	fi
@@ -22,5 +21,6 @@ if [[ "$check" == "false" ]]; then
 		rmmod usb-storage
 	fi
 fi
+
 
 
