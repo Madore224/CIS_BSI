@@ -3,7 +3,6 @@
 #Fiable 65 %
 echo "[+] Unload the usb-storage..."
 
-output1=$(modprobe -n -v usb-storage)
 output2=$(lsmod | grep usb-storage)
 
 check="false"
