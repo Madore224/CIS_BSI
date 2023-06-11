@@ -17,7 +17,7 @@ if dpkg -s autofs >/dev/null 2>&1; then
 		
         #Disabled AutoFS
 		if [ "$choix" = "1" ]; then
-			echo "You choose to desable AutoFS..."
+			echo "You choose to disable AutoFS..."
 			sudo systemctl --now mask autofs
 			echo "AutoFs now is disabled."
 			break
