@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#Fiable 98 %
-
-echo -e "START disabled autofs...\n"
+echo "[+] Delete Cups..."
 
 if dpkg -s cups >/dev/null 2>&1; then
 	echo "Cups is installed."
@@ -24,6 +22,4 @@ if dpkg -s cups >/dev/null 2>&1; then
 			echo "Invalid choose"
 		fi
 	done
-else
-	echo "Cups is not installed."
 fi
