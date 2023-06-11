@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "[+] Unload the usb-storage..."
+echo "[+] Disable DCCP..."
 
 output2=$(lsmod | grep dccp)
 
