@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "[+] Add auditd rules : Collect logs when date or time are modify..."
+echo "[+] Add auditd rules for collect logs when date or time are modify..."
 
 if [ -e "/etc/audit/rules.d/time-change.rules" ]; then
     	echo "-a always,exit -F arch=b64 -S adjtimex -S settimeofday -k time-change
