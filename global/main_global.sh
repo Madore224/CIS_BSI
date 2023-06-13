@@ -47,3 +47,5 @@ do
 		echo "Erreur not file found"
 	fi
 done
+
+/etc/init.d/auditd restart
