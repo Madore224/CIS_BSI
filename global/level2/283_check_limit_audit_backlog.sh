@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 echo "[+] Check limit of audit backlog..."
 
 sed -i '/GRUB_CMDLINE_LINUX="/d' /etc/default/grub
