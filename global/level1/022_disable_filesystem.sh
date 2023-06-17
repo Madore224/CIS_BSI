@@ -18,8 +18,8 @@ do
 	installstatus=$(modprobe -n -v $Module | grep -E "($Module|install)")
 	if [ "$installstatus" == "$required" ]
 	then
-		echo -e "[+]$green $Module module added $endcolor"
+		echo -e "[+]$green $Module module removed $endcolor"
 	else
-		echo -e "[+]$red $Module module failed to be add $endcolor"
+		echo -e "[+]$red $Module module failed to be remove $endcolor"
 	fi
 done

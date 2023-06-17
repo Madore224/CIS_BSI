@@ -10,7 +10,7 @@ if [[ "$(diff /etc/default/grub patch_files/grub)" != "" ]]
 then
 	echo -e "[+]$green Patching /etc/default/grub $endcolor"
 	diff /etc/default/grub patch_files/grub > patch.patch
-        patch /etc/default/grub -i patch.patch > /dev/null 2>&1
-        rm patch.patch /dev/null 2>&1
+    patch /etc/default/grub -i patch.patch > /dev/null 2>&1
+    rm patch.patch /dev/null 2>&1
 	update-grub /dev/null 2>&1
 fi

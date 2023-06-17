@@ -5,7 +5,7 @@ red="\033[31m"
 endcolor="\033[0m\n"
 
 #page 71
-echo -e "[+]$green Check if USB Storage is enabled $endcolor"
+echo -e "[+]$green Check if USB Storage is disabled $endcolor"
 if [ "$(modprobe -n -v usb-storage | grep 'install' | grep '/bin/true')" == "" ]
 then
 	if [ "$(lsmod | grep 'usb-storage')" != "" ]
