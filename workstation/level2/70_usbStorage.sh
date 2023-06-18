@@ -14,11 +14,11 @@ fi
 if [[ "$check" == "false" ]]; then
 	if [ -e /etc/modprobe.d/usb_storage.conf ]; then
 		echo "install usb-storage /bin/true" >> /etc/modprobe.d/usb_storage.conf
-		rmmod usb-storage
+		rmmod usb-storage >/dev/null 2>&1
 	else
 		touch /etc/modprobe.d/usb_storage.conf
 		echo "install usb-storage /bin/true" >> /etc/modprobe.d/usb_storage.conf
-		rmmod usb-storage
+		rmmod usb-storage >/dev/null 2>&1
 	fi
 fi
 
