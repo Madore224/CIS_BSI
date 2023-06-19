@@ -10,5 +10,5 @@ command=$(apt -s upgrade)
 if echo $command | grep -q ''
 then
 	echo -e "[+]$green Upgrading $endcolor"
-	apt -y upgrade
+	apt -y upgrade > /dev/null 2>&1
 fi

@@ -8,7 +8,7 @@ endcolor="\033[0m\n"
 command=$(dpkg-query -l)
 for Packages in "xinetd" "openbsd-inetd" "xserver-xorg" "cups" "isc-dhcp-server" "slapd" "nfs-kernel-server" "bind9*" "vsftpd" "apache2" "dovecot-imapd" "dovecot-pop3d" "samba*" "squid" "snmpd" "rsync" "nis" "rsh-client" "talk" "telnet" "ldap-utils" "rpcbind" "iptables-persistent"
 do
-		echo -e "[+]$green Check if $Packages are installed $endcolor"
+		echo -e "[+]$green Check if $Packages is installed $endcolor"
         if echo $command | grep -q $Packages
         then
 		if [ "$Packages" == "nfs-kernel-server" ]
