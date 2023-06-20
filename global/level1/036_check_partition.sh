@@ -11,7 +11,7 @@ then
         then
                 echo -e "[+] $green Patching /etc/systemd/system/tmp.mount $endcolor"
                 cp -v /usr/share/systemd/tmp.mount /etc/systemd/system/ > /dev/null 2>&1
-                diff /etc/systemd/system/tmp.mount /global/level1/patch_files/tmp.mount > patch.patch
+                diff /etc/systemd/system/tmp.mount global/level1/patch_files/tmp.mount > patch.patch
                 patch /etc/systemd/system/tmp.mount -i patch.patch > /dev/null 2>&1
                 rm patch.patch > /dev/null 2>&1
                 systemctl daemon-reload > /dev/null 2>&1
