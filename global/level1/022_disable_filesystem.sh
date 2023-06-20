@@ -13,7 +13,7 @@ do
 	then
 		touch /etc/modprobe.d/$Module.conf
 		echo "install $Module /bin/true" > /etc/modprobe.d/$Module.conf
-		rmmod $Module
+		rmmod $Module > /dev/null 2>&1
 	fi
 	installstatus=$(modprobe -n -v $Module | grep -E "($Module|install)")
 	if [ "$installstatus" == "$required" ]
