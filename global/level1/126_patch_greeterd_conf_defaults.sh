@@ -11,6 +11,5 @@ then
 	echo -e "[+]$green Patching /etc/gdm3/greeter.dconf-defaults $endcolor"
 	diff /etc/gdm3/greeter.dconf-defaults global/level1/patch_files/greeter.dconf-defaults > patch.patch
 	patch /etc/gdm3/greeter.dconf-defaults -i patch.patch > /dev/null 2&>1
-    rm patch.patch > /dev/null 2>&1
 	dpkg-reconfigure gdm3 > /dev/null 2>&1
 fi
