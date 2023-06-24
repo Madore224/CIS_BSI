@@ -8,7 +8,8 @@ endcolor="\033[0m\n"
 echo -e "[+]$green Check if apparmor is installed $endcolor"
 if [ "$(dpkg-query -l | grep 'apparmor')" == "" ]
 then
-	echo -e "[+]$green Install apparmor $endcolor"
+	echo -e "[+]$green Install apparmor & apparmor-utils $endcolor"
 	apt install -y apparmor > /dev/null 2>&1
+	apt install -y apparmor-utils > /dev/null 2>&1
 fi
 

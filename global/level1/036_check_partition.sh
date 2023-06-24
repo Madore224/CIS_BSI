@@ -15,7 +15,7 @@ then
                 patch /etc/systemd/system/tmp.mount -i patch.patch > /dev/null 2>&1
                 rm patch.patch > /dev/null 2>&1
                 systemctl daemon-reload > /dev/null 2>&1
-                systemctl --now enabled tmp.mount > /dev/null 2>&1
+                systemctl --now enable tmp.mount > /dev/null 2>&1
                 mount -o remount,nodev /tmp 
                 mount -o remount,nosuid /tmp
                 mount -o remount,noexec /tmp
