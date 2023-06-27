@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/env bash
 
 #page 222
 
-echo "Ensure outbound connection are configured"
+echo "[+] Ensure outbound connection are configured"
 output=$(ufw status numbered)
 
 if [[ ! "$output" =~ OUT ]]; then

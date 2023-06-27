@@ -3,7 +3,7 @@
 
 #page 221
 
-echo "Ensure loopback is configured"
+echo "[+] Ensure loopback is configured"
 
 status=$(ufw status verbose | grep "État" | awk '{print $NF}')
 

@@ -2,15 +2,15 @@
 
 #Page 231
 
-echo "Ensure nftables are installed"
+echo "[+] Ensure nftables are installed"
 
 if dpkg-query -s nftables | grep 'Status: install ok installed' > /dev/null 2>&1; then
-    
+    echo ""
 else
     # If nftables is not installed, install it using apt
     
     sudo apt update
-    sudo apt install nftables
+    sudo apt install nftables >/dev/null 2>&1
     
 fi
 
@@ -19,6 +19,6 @@ status=$(dpkg-query -s nftables | grep 'Status: install ok installed')
 
 # Vérifier si la commande renvoie "Status: install ok installed"
 if [[ $status != "Status: install ok installed" ]]; then
-    # Si la commande ne renvoie pas "Status: install ok installed", exécuter "apt install nftables"
+    
     apt install nftables
 fi
