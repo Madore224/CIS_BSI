@@ -1,10 +1,12 @@
 #!/bin/bash
 
+echo "[+] Verify nftables base chains"
+
 # Check if IPv6 is disabled
 ipv6_disabled=$(grep "^\s*linux" /boot/grub/grub.cfg | grep -v ipv6.disable=1)
 
 if [[ -n "$ipv6_disabled" ]]; then
-  echo "IPv6 is disabled."
+  echo ""
 else
   # Verify ip6tables policy
   ip6tables_policy=$(ip6tables -L | awk '/Chain (INPUT|OUTPUT|FORWARD)/{chain=$2; getline; policy=$NF; print chain,policy}')
