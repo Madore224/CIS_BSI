@@ -48,4 +48,4 @@ do
 	fi
 done
 
-/etc/init.d/auditd restart
+/etc/init.d/auditd restart >/dev/null 2>&1
