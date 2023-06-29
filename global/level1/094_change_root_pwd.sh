@@ -1,13 +1,9 @@
 #!/bin/bash
 
-green="\033[32m"
-red="\033[31m"
-endcolor="\033[0m\n"
-
 #page 94
-echo -e "[+]$green Ensure authentication required for single user mode $endcolor"
+echo -e "[+] Ensure authentication required for single user mode"
 if [ "$(grep '^root:[*\!]:' /etc/shadow)" != "" ]
 then
-	echo -e "[+]$green Change root password $endcolor"
+	echo -e "[+] Change root password"
 	passwd root
 fi
