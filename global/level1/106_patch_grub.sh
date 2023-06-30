@@ -6,7 +6,7 @@ endcolor="\033[0m\n"
 
 #page 106
 echo -e "[+] Ensure AppArmor is enabled in the bootloader configuration"
-if [[ "$(diff /etc/default/grub global/level1/patch_files/grub)" != "" ]]
+if [[ "$(cat /etc/default/grub | grep 'GRUB_CMDLINE_LINUX="apparmor=1 security=apparmor')" == "" ]]
 then
 	echo -e "[+] Patching /etc/default/grub"
 	echo 'GRUB_CMDLINE_LINUX="apparmor=1 security=apparmor"' >> /etc/default/grub
