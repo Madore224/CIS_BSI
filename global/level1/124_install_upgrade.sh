@@ -6,5 +6,6 @@ command=$(apt -s upgrade)
 if echo $command | grep -q ''
 then
 	echo -e "[+] Upgrading "
+ 	apt -y update > /dev/null 2>&1
 	apt -y upgrade > /dev/null 2>&1
 fi
