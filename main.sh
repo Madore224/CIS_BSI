@@ -17,7 +17,17 @@ if sudo -n true 2>/dev/null; then
 
 	# Vérifier la réponse de l'utilisateur
 	if [[ $choix == "1" ]]; then
-		echo "Vous avez choisi l'option A."
+		if [ -f $script_global ]; then
+		  bash $script_global
+		  
+		  if [ -f $script_server ]; then
+		  	bash $script_server
+		  else
+		  	echo "Erreur: le fichier $script_server n'existe pas"
+		  fi
+		else
+		  echo "Erreur: le fichier $script_global n'existe pas"
+		fi
 	elif [[ $choix == "2" ]]; then
 	 	# vérifier si le fichier existe
 		if [ -f $script_global ]; then
