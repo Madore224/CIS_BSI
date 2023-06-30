@@ -9,7 +9,6 @@ echo -e "[+] Ensure AppArmor is enabled in the bootloader configuration"
 if [[ "$(diff /etc/default/grub global/level1/patch_files/grub)" != "" ]]
 then
 	echo -e "[+] Patching /etc/default/grub"
-	diff /etc/default/grub global/level1/patch_files/grub > patch.patch
-    patch /etc/default/grub -i patch.patch > /dev/null 2>&1
+	echo 'GRUB_CMDLINE_LINUX="apparmor=1 security=apparmor"' >> /etc/default/grub
 	update-grub > /dev/null 2>&1
 fi
