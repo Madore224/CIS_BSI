@@ -1,5 +1,5 @@
 # CIS_BSI
-BSI 2022-2023, CIS Automation
+BSI 2022-2023, Auto CIS
 
 
 Clone or download the project files (no installation is required) ;
