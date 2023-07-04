@@ -10,7 +10,7 @@ permissions_required="600"
 # Check if /etc/cron.deny exists
 if [ -e "$cron_deny_file" ]; then
   echo ""
-  rm "$cron_deny_file"
+  rm "$cron_deny_file" > /dev/null 2>&1
   echo ""
 fi
 

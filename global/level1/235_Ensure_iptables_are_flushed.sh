@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 echo "[+] Ensure Iptables are flushed"
 
@@ -15,5 +15,5 @@ ip6tables_rules=$(ip6tables -L)
 if [[ -z $ip6tables_rules ]]; then
   echo ""
 else
-  ip6tables -F
+  ip6tables -F > /dev/null 2>&1
 fi

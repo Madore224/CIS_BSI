@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "[+] nftables_enabled" 
+echo "[+] Ensure nftables are enabled" 
 
 # Verify if nftables service is enabled
 nftables_enabled=$(systemctl is-enabled nftables)
