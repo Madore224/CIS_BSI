@@ -12,11 +12,14 @@ their security and protect themselves against cyber threats.
 
 This GIT repository automates part of the CIS guide, but some parts have to be done manually.
 *******************************************************************
+Pass root
+
+	su -
+ 
 Clone or download the project files (no installation is required) ;
 
 	git clone https://github.com/Madore224/CIS_BSI
  
 Execute:
 
-	su -
 	cd CIS_BSI && chmod +x main.sh && ./main.sh
