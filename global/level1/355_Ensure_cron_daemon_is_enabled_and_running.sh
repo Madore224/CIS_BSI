@@ -3,18 +3,18 @@
 echo "[+] Ensure cron daemon is anabled and running"
 # Check if cron is enabled
 if ! systemctl is-enabled cron &> /dev/null; then
-  echo "Cron is not enabled. Enabling and starting cron..."
+  echo ""
   
   # Enable and start cron
   systemctl --now enable cron
   
-  echo "Cron has been enabled and started."
+  echo ""
 else
   # Check if cron is running
   if systemctl status cron | grep -q 'Active: active (running)'; then
-    echo "Cron is enabled and running."
+    echo ""
   else
-    echo "Cron is enabled but not running."
+    echo ""
   fi
 fi
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "[+] ENsure SSH permit user environment is disabled"
+echo "[+] Ensure SSH permit user environment is disabled"
 
 output=$(sshd -T | grep "permituserenvironment")
 
