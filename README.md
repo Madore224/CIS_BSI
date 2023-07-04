@@ -8,4 +8,5 @@ Clone or download the project files (no installation is required) ;
  
 Execute:
 
-	cd CIS_BSI && chmod +x main.sh && sudo ./main.sh
+	su -
+	cd CIS_BSI && chmod +x main.sh && ./main.sh
