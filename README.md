@@ -10,7 +10,7 @@ the security of their systems and protect themselves against cyber-attacks.
 He give a set of best practices for IT security that helps organizations strengthen
 their security and protect themselves against cyber threats.
 
-
+This GIT repository automates part of the CIS guide, but some parts have to be done manually.
 *******************************************************************
 Clone or download the project files (no installation is required) ;
 
