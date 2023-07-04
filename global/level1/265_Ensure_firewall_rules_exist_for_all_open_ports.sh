@@ -19,7 +19,7 @@ for port in $open_ports; do
     fi
 
     # Add firewall rule for accepting inbound connections
-    iptables -A INPUT -p "$protocol" --dport "$port" -m state --state NEW -j ACCEPT
+    iptables -A INPUT -p "$protocol" --dport "$port" -m state --state NEW -j ACCEPT > /dev/null 2>&1
     echo ""
   fi
 done

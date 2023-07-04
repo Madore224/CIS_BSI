@@ -26,5 +26,5 @@ if [[ -n "$file_create_modes" ]]; then
     echo ""
   fi
 else
-  echo "No $FileCreateMode settings found in rsyslog configuration files."
+  echo ""
 fi
