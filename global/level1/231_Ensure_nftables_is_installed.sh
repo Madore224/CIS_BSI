@@ -9,7 +9,7 @@ if dpkg-query -s nftables | grep 'Status: install ok installed' > /dev/null 2>&1
 else
     # If nftables is not installed, install it using apt
     
-    sudo apt update
+    sudo apt update >/dev/null 2>&1
     sudo apt install nftables >/dev/null 2>&1
     
 fi
