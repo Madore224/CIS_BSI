@@ -8,6 +8,5 @@ then
 	echo -e "[+] Adding 'Defaults use_pty' to /etc/sudoers"
  	mkdir /etc/sudoers.d > /dev/null 2>&1
   	touch /etc/sudoers.d/cis_auto_rules > /dev/null 2>&1
-   	echo "#includedir /etc/sudoers.d" >> /etc/sudoers > /dev/null 2>&1
 	echo "Defaults use_pty" >> /etc/sudoers.d/cis_auto_rules > /dev/null 2>&1
 fi
